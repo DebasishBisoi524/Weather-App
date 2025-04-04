@@ -211,3 +211,17 @@ body {
 .icon img:hover{
   transform: scale(1.1);
 }
+
+.heart {
+  display: inline-block;
+  animation: heartbeat 0.9s infinite ease-in-out;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
