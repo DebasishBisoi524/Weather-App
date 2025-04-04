@@ -185,3 +185,29 @@ body {
   color: white;
   font-weight: bold;
 }
+
+.icon {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: white;
+}
+
+.icon img {
+  width: 30px; 
+  height: auto;
+  transition: all 0.2s ease-in-out;
+}
+
+.icon h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.icon img:hover{
+  transform: scale(1.1);
+}
