@@ -14,6 +14,93 @@ body {
   padding: 10px;
 }
 
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+  display: none;
+  pointer-events: all;
+}
+
+/* Alert box container */
+.alert-box {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 400px;
+  margin-top: 55px;
+  padding: 25px 30px;
+  background: red;
+  color: white;
+  border-radius: 16px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  text-align: center;
+  display: none;
+}
+
+/* Alert message text */
+.alert-box #alertMessage {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Button container */
+.alert-box #alertButton {
+  display: flex;
+  justify-content: center;
+}
+
+/* "Try Again" button styling */
+#OkayBtn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s ease-in-out;
+}
+
+/* Hover effect */
+#OkayBtn:hover {
+  background-color: white;
+  transform: scale(1.05);
+  color: #000;
+}
+
+/* Active (click) effect */
+#OkayBtn:active {
+  transform: scale(0.95);
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .alert-box {
+    padding: 20px 20px;
+  }
+
+  .alert-box #alertMessage {
+    font-size: 0.95rem;
+  }
+
+  #OkayBtn {
+    padding: 9px 18px;
+    font-size: 0.9rem;
+  }
+}
+
 .card {
   width: 100%;
   max-width: 470px;
@@ -198,7 +285,7 @@ body {
 }
 
 .icon img {
-  width: 30px; 
+  width: 30px;
   height: auto;
   transition: all 0.2s ease-in-out;
 }
@@ -208,7 +295,7 @@ body {
   font-weight: 600;
 }
 
-.icon img:hover{
+.icon img:hover {
   transform: scale(1.1);
 }
 
@@ -218,7 +305,8 @@ body {
 }
 
 @keyframes heartbeat {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
